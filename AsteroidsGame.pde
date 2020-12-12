@@ -1,4 +1,3 @@
-
 Star[] skyy = new Star [200];
 ArrayList <Asteroid> qwe = new ArrayList <Asteroid>();
 Spaceship anch = new Spaceship();
@@ -55,14 +54,14 @@ public void draw()
   }
 }
 public void keyPressed(){
-  if(key == 's'){
+  if(key == 'h'){
       anch.stop();
       anch.hyperSpace();
-  }else if(key == 'w'){
+  }else if(key == 'g'){
       anch.accelerate(.5);
-  }else if(key == 'a'){
+  }else if(key == 'y'){
       anch.turn(-30);
-  }else if(key == 'd'){
+  }else if(key == 'j'){
       anch.turn(30);
     }
    else if(key == ' '){
@@ -70,4 +69,3 @@ public void keyPressed(){
         gepa.add(new Bullet());
    }
   }
-
