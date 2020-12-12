@@ -7,7 +7,7 @@ class Asteroid extends Floater{
       xCorners[0] = -11;
       yCorners[0] = -8;
       xCorners[1] = 7;
-      yCorners[1] = -8; 
+      yCorners[1] = -8;
       xCorners[2] = 13;
       yCorners[2] = 0;
       xCorners[3] = 6;
