@@ -1,73 +1,73 @@
-Star[] nightSky = new Star [200];
-ArrayList <Asteroid> kirk = new ArrayList <Asteroid>();
-Spaceship tim = new Spaceship();
-ArrayList <Bullet> yeet = new ArrayList <Bullet>();
+
+Star[] skyy = new Star [200];
+ArrayList <Asteroid> qwe = new ArrayList <Asteroid>();
+Spaceship anch = new Spaceship();
+ArrayList <Bullet> gepa = new ArrayList <Bullet>();
 int a = 10;
 int lev = 1;
 public void setup()
 {
   size(500,500);
   background(0);
-  for(int i = 0; i < nightSky.length; i++)
+  for(int i = 0; i < skyy.length; i++)
   {
-    nightSky[i] = new Star();
+    skyy[i] = new Star();
   }
   for(int p = 0; p < a; p++)
   {
-    kirk.add(new Asteroid());
+    qwe.add(new Asteroid());
   }
 }
 public void draw() 
 {
  background(0);
-  for(int i = 0; i < nightSky.length; i++)
+  for(int i = 0; i < skyy.length; i++)
     {
-      nightSky[i].show();
+      skyy[i].show();
     }
-  for(int p = 0; p < kirk.size(); p++)
+  for(int p = 0; p < qwe.size(); p++)
     {
-      kirk.get(p).show();
-      kirk.get(p).move();
-      if(dist(kirk.get(p).getMyX(), kirk.get(p).getMyY(), tim.getMyX(), tim.getMyY()) < 20){
-          kirk.remove(p);
-          break;
-        }
-          for(int k = 0; k < yeet.size(); k++)
-          if(dist(qwe.get(p).getMyX(), qwe.get(p).getMyY(), yeet.get(k).getMyX(), yeet.get(k).getMyY()) < 20){
+      qwe.get(p).show();
+      qwe.get(p).move();
+      if(dist(qwe.get(p).getMyX(), qwe.get(p).getMyY(), anch.getMyX(), anch.getMyY()) < 20){
           qwe.remove(p);
-          yeet.remove(k);
           break;
         }
+        for(int k = 0; k < gepa.size(); k++)
+          if(dist(qwe.get(p).getMyX(), qwe.get(p).getMyY(), gepa.get(k).getMyX(), gepa.get(k).getMyY()) < 20){
+            qwe.remove(p);
+            gepa.remove(k);
+            break;
+        }
     }
-  for(int k = 0; k < yeet.size(); k++){
-      yeet.get(k).show();
-      yeet.get(k).move();
+  for(int k = 0; k < gepa.size(); k++){
+      gepa.get(k).show();
+      gepa.get(k).move();
     }
-    }
-  tim.move();
-  tim.show();
-  if(kirk.size() == 0){
+  anch.move();
+  anch.show();
+  if(qwe.size() == 0){
     for(int p = 0; p < (a+lev*5-5); p++)
     {
-      kirk.add(new Asteroid());
+      qwe.add(new Asteroid());
     }
     lev++;
   }
 }
 public void keyPressed(){
-  if(key == 's'){
-      tim.stop();
-      tim.hyperSpace();
-  }else if(key == 'w'){
-      tim.accelerate(.5);
-  }else if(key == 'a'){
-      tim.turn(-30);
-  }else if(key == 'd'){
-      tim.turn(30);
+  if(key == 'h'){
+      anch.stop();
+      anch.hyperSpace();
+  }else if(key == 'g'){
+      anch.accelerate(.5);
+  }else if(key == 'y'){
+      anch.turn(-30);
+  }else if(key == 'j'){
+      anch.turn(30);
     }
    else if(key == ' '){
-      if(yeet.size() < 8)
-        yeet.add(new Bullet());
+      if(gepa.size() < 8)
+        gepa.add(new Bullet());
    }
-  }
+  }}
 
