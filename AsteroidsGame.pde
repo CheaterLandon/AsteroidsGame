@@ -54,14 +54,14 @@ public void draw()
   }
 }
 public void keyPressed(){
-  if(key == 'h'){
+  if(key == 's'){
       anch.stop();
       anch.hyperSpace();
-  }else if(key == 'g'){
+  }else if(key == 'w'){
       anch.accelerate(.5);
-  }else if(key == 'y'){
+  }else if(key == 'a'){
       anch.turn(-30);
-  }else if(key == 'j'){
+  }else if(key == 'd'){
       anch.turn(30);
     }
    else if(key == ' '){
