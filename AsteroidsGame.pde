@@ -69,5 +69,5 @@ public void keyPressed(){
       if(gepa.size() < 8)
         gepa.add(new Bullet());
    }
-  }}
+  }
 
