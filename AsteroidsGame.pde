@@ -1,4 +1,4 @@
-Star[] skyy = new Star [200];
+Star[] bob = new Star [200];
 ArrayList <Asteroid> qwe = new ArrayList <Asteroid>();
 Spaceship anch = new Spaceship();
 ArrayList <Bullet> gepa = new ArrayList <Bullet>();
@@ -8,9 +8,9 @@ public void setup()
 {
   size(500,500);
   background(0);
-  for(int i = 0; i < skyy.length; i++)
+  for(int i = 0; i < bob.length; i++)
   {
-    skyy[i] = new Star();
+    bob[i] = new Star();
   }
   for(int p = 0; p < a; p++)
   {
@@ -20,9 +20,9 @@ public void setup()
 public void draw() 
 {
  background(0);
-  for(int i = 0; i < skyy.length; i++)
+  for(int i = 0; i < bob.length; i++)
     {
-      skyy[i].show();
+      bob[i].show();
     }
   for(int p = 0; p < qwe.size(); p++)
     {
