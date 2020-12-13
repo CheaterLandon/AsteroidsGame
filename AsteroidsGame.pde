@@ -32,7 +32,7 @@ public void draw()
           steve.remove(p);
           break;
         }
-        for(int k = 0; k < gepa.size(); k++)
+        for(int k = 0; k < yeet.size(); k++)
           if(dist(steve.get(p).getMyX(), steve.get(p).getMyY(), yeet.get(k).getMyX(), yeet.get(k).getMyY()) < 20){
             steve.remove(p);
             yeet.remove(k);
