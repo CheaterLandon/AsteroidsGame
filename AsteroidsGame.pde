@@ -1,5 +1,5 @@
 Star[] bob = new Star [200];
-ArrayList <Asteroid> qwe = new ArrayList <Asteroid>();
+ArrayList <Asteroid> steve = new ArrayList <Asteroid>();
 Spaceship anch = new Spaceship();
 ArrayList <Bullet> gepa = new ArrayList <Bullet>();
 int a = 10;
@@ -14,7 +14,7 @@ public void setup()
   }
   for(int p = 0; p < a; p++)
   {
-    qwe.add(new Asteroid());
+    steve.add(new Asteroid());
   }
 }
 public void draw() 
@@ -24,17 +24,17 @@ public void draw()
     {
       bob[i].show();
     }
-  for(int p = 0; p < qwe.size(); p++)
+  for(int p = 0; p < steve.size(); p++)
     {
-      qwe.get(p).show();
-      qwe.get(p).move();
-      if(dist(qwe.get(p).getMyX(), qwe.get(p).getMyY(), anch.getMyX(), anch.getMyY()) < 20){
-          qwe.remove(p);
+      steve.get(p).show();
+      steve.get(p).move();
+      if(dist(steve.get(p).getMyX(), steve.get(p).getMyY(), anch.getMyX(), anch.getMyY()) < 20){
+          steve.remove(p);
           break;
         }
         for(int k = 0; k < gepa.size(); k++)
-          if(dist(qwe.get(p).getMyX(), qwe.get(p).getMyY(), gepa.get(k).getMyX(), gepa.get(k).getMyY()) < 20){
-            qwe.remove(p);
+          if(dist(steve.get(p).getMyX(), steve.get(p).getMyY(), gepa.get(k).getMyX(), gepa.get(k).getMyY()) < 20){
+            steve.remove(p);
             gepa.remove(k);
             break;
         }
@@ -45,10 +45,10 @@ public void draw()
     }
   anch.move();
   anch.show();
-  if(qwe.size() == 0){
+  if(steve.size() == 0){
     for(int p = 0; p < (a+lev*5-5); p++)
     {
-      qwe.add(new Asteroid());
+      steve.add(new Asteroid());
     }
     lev++;
   }
