@@ -1,6 +1,6 @@
 Star[] bob = new Star [200];
 ArrayList <Asteroid> steve = new ArrayList <Asteroid>();
-Spaceship anch = new Spaceship();
+Spaceship joe = new Spaceship();
 ArrayList <Bullet> gepa = new ArrayList <Bullet>();
 int a = 10;
 int lev = 1;
@@ -28,7 +28,7 @@ public void draw()
     {
       steve.get(p).show();
       steve.get(p).move();
-      if(dist(steve.get(p).getMyX(), steve.get(p).getMyY(), anch.getMyX(), anch.getMyY()) < 20){
+      if(dist(steve.get(p).getMyX(), steve.get(p).getMyY(), joe.getMyX(), joe.getMyY()) < 20){
           steve.remove(p);
           break;
         }
@@ -43,8 +43,8 @@ public void draw()
       gepa.get(k).show();
       gepa.get(k).move();
     }
-  anch.move();
-  anch.show();
+  joe.move();
+  joe.show();
   if(steve.size() == 0){
     for(int p = 0; p < (a+lev*5-5); p++)
     {
@@ -55,14 +55,14 @@ public void draw()
 }
 public void keyPressed(){
   if(key == 's'){
-      anch.stop();
-      anch.hyperSpace();
+      joe.stop();
+      joe.hyperSpace();
   }else if(key == 'w'){
-      anch.accelerate(.5);
+      joe.accelerate(.5);
   }else if(key == 'a'){
-      anch.turn(-30);
+      joe.turn(-30);
   }else if(key == 'd'){
-      anch.turn(30);
+      joe.turn(30);
     }
    else if(key == ' '){
       if(gepa.size() < 8)
