@@ -1,7 +1,6 @@
 Star[] bob = new Star [200];
 ArrayList <Asteroid> steve = new ArrayList <Asteroid>();
 Spaceship joe = new Spaceship();
-ArrayList <Bullet> yeet = new ArrayList <Bullet>();
 int a = 10;
 int lev = 1;
 public void setup()
@@ -32,17 +31,6 @@ public void draw()
           steve.remove(p);
           break;
         }
-        for(int k = 0; k < yeet.size(); k++)
-          if(dist(steve.get(p).getMyX(), steve.get(p).getMyY(), yeet.get(k).getMyX(), yeet.get(k).getMyY()) < 20){
-            steve.remove(p);
-            yeet.remove(k);
-            break;
-        }
-    }
-  for(int k = 0; k < yeet.size(); k++){
-      yeet.get(k).show();
-      yeet.get(k).move();
-    }
   joe.move();
   joe.show();
   if(steve.size() == 0){
@@ -64,8 +52,4 @@ public void keyPressed(){
   }else if(key == 'd'){
       joe.turn(30);
     }
-   else if(key == ' '){
-      if(yeet.size() < 8)
-        yeet.add(new Bullet());
-   }
   }
